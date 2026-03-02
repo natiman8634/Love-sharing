@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-
+import telegram from "../assets/telegram.png";
 const Footer = () => {
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">
@@ -26,6 +26,10 @@ const Footer = () => {
 
           <ul className="space-y-3">
             <li>📍 አርባ ምንጭ ዩኒቨርስቲ , Main-Campus</li>
+            <li> <a href="https://t.me/c/2360570330/1" className="flex items-center">
+              <img src={telegram} className="h-5 mr-2" />
+              Love-sharing Telegram Group
+            </a> </li>
             
            
           </ul>
