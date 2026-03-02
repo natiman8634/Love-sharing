@@ -14,7 +14,7 @@ const Footer = () => {
           </h3>
 
           <p className="text-gray-400 leading-relaxed">
-            ፍቅርን የሚያጋሩ የክርስቲያን ተማሪዎች ህብረት
+            ፍቅርን የሚያጋሩ የክርስቲያን ተማሪዎች ህብረት።
           </p>
         </div>
 
