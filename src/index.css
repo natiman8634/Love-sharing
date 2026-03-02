@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}

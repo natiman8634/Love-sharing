@@ -1,0 +1,94 @@
+/* MAIN HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  background: #ffffff;
+  min-height: 90vh;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* TEXT SIDE */
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background: #111827;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 14px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* SLIDER SIDE */
+.hero-slider {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* KEY PART — FULL IMAGE VISIBILITY */
+.hero-slider img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;   /* ⭐ IMPORTANT */
+}
+
+/* SWIPER STYLE */
+.mySwiper {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-slider img {
+    height: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-slider img {
+    height: 260px;
+  }
+}
