@@ -20,13 +20,11 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Professional Smooth Scroll Handler
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     
     if (element) {
-      // Calculate position minus the fixed navbar height (approx 80px)
       const offset = 80; 
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
@@ -81,8 +79,8 @@ const Hero = () => {
 
           <div className="mt-6 md:mt-10">
             <a
-              href="#purpose"
-              onClick={(e) => handleSmoothScroll(e, "purpose")}
+              href="#join"
+              onClick={(e) => handleSmoothScroll(e, "join")}
               className="inline-block bg-white text-gray-900 px-6 py-2.5 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl hover:scale-105 transition-transform"
             >
               Join Our Mission
@@ -90,16 +88,17 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* PAGINATION DOTS */}
+        {/* PAGINATION DOTS (The "Small Balls") */}
         <div className="absolute bottom-6 md:bottom-10 w-full flex justify-center gap-1.5 md:gap-3 z-20">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`transition-all duration-300 rounded-full ${
+              aria-label={`Go to slide ${index + 1}`}
+              className={`transition-all duration-500 rounded-full ${
                 current === index 
-                  ? "bg-white w-5 h-1 md:w-10 md:h-2.5" 
-                  : "bg-white/30 w-1 h-1 md:w-2.5 md:h-2.5 hover:bg-white/60" 
+                  ? "bg-yellow-400 w-6 h-1.5 md:w-12 md:h-3 shadow-[0_0_10px_rgba(250,204,21,0.8)]" 
+                  : "bg-yellow-400/30 w-1.5 h-1.5 md:w-3 md:h-3 hover:bg-yellow-400/60" 
               }`}
             />
           ))}
