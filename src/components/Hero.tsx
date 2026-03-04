@@ -13,77 +13,83 @@ const images = [hero5, hero1, hero2, hero7, hero6, hero3, hero4];
 const Hero = () => {
   const [current, setCurrent] = useState(0);
 
-  /* AUTO SLIDE */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section
       id="home"
-      className="
-        relative w-full flex items-center justify-center overflow-hidden
-        h-[100dvh] md:h-screen
-      "
+      className="relative w-full overflow-hidden flex flex-col justify-center bg-white"
     >
-      {/* SLIDER IMAGES */}
-      {images.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={`Hero slide ${index + 1}`}
-          draggable="false"
-          loading="lazy"
-          className={`
-            absolute inset-0
-            w-full h-full
-            object-cover
-            object-center
-            transition-opacity duration-1000 ease-in-out
-            ${index === current ? "opacity-100" : "opacity-0"}
-          `}
-        />
-      ))}
-
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/65" />
-
-      {/* CONTENT */}
-      <div className="relative z-10 text-center text-white px-6 max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold">
-          Love <span className="text-yellow-400">Sharing</span>
-        </h1>
-
-        <p className="mt-6 text-base md:text-lg">
-          የእግዚአብሄርን <span className="text-red-400">ፍቅር </span>
-          መሰረት ያደረገ ፍቅርን ለማጋራት የተመሰረተ የተማሪዎች አገልግሎት
-        </p>
-
+      {/* 1. Removed fixed aspect ratio to prevent horizontal cutting.
+          2. On mobile, we use a height that fits the content without black bars.
+          3. On desktop (md:), we keep the full-screen hero feel.
+      */}
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen transition-all duration-500">
         
-          <a
-            href="#join"
-            className="mt-8 inline-block bg-white text-pink-900 px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
-          >
-            Join Our Mission
-          </a>
-        
-      </div>
-
-      {/* DOTS */}
-      <div className="absolute bottom-8 flex gap-3 z-20">
-        {images.map((_, index) => (
-          <button
+        {/* SLIDER IMAGES */}
+        {images.map((img, index) => (
+          <img
             key={index}
-            aria-label={`Go to slide ${index + 1}`}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition ${current === index ? "bg-white scale-125" : "bg-white/40"
-              }`}
+            src={img}
+            alt={`Hero slide ${index + 1}`}
+            draggable="false"
+            className={`
+              absolute inset-0
+              w-full h-full
+              /* Changed to object-cover to fill the space and remove black bars */
+              object-cover 
+              object-center
+              transition-opacity duration-1000 ease-in-out
+              ${index === current ? "opacity-100" : "opacity-0"}
+            `}
           />
         ))}
+
+        {/* DARK OVERLAY - Ensures text is readable over the images */}
+        <div className="absolute inset-0 bg-black/45 md:bg-black/60" />
+
+        {/* CONTENT */}
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-6">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight drop-shadow-2xl">
+            Love <span className="text-yellow-400">Sharing</span>
+          </h1>
+
+          <p className="mt-4 md:mt-6 text-base sm:text-lg md:text-2xl font-medium max-w-2xl mx-auto drop-shadow-md">
+            የእግዚአብሄርን <span className="text-red-400 font-bold">ፍቅር </span>
+            መሰረት ያደረገ ፍቅርን ለማጋራት የተመሰረተ የተማሪዎች አገልግሎት
+          </p>
+
+          <div className="mt-8">
+            <a
+              href="#join"
+              className="inline-block bg-white text-gray-900 px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-transform"
+            >
+              Join Our Mission
+            </a>
+          </div>
+        </div>
+
+        {/* MOVING BALLS (DOTS) 
+            Positioned 'absolute bottom-8' to stay inside the image area 
+        */}
+        <div className="absolute bottom-8 w-full flex justify-center gap-3 z-20">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`transition-all duration-300 rounded-full ${
+                current === index 
+                  ? "bg-white w-8 h-2" // Active pill shape
+                  : "bg-white/40 w-2 h-2 hover:bg-white/70" // Inactive circle
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
