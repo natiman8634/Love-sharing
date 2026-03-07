@@ -1,5 +1,5 @@
-import logo from "../assets/logo.png";
-import telegram from "../assets/telegram.png";
+import logo from "../../assets/Love-sharing-logo/logo.png";
+import telegram from "../../assets/telegram.png";
 const Footer = () => {
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">

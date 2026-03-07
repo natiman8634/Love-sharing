@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
-import hero4 from "../assets/hero4.jpg";
-import hero5 from "../assets/IMG_9780.jpeg";
-import hero6 from "../assets/IMG_9767.jpeg";
-import hero7 from "../assets/20250610_182355.jpg";
+import hero1 from "../../assets/Banner-images/hero1.jpeg";
+import hero2 from "../../assets/Banner-images/hero2.jpg";
+import hero3 from "../../assets/Banner-images/hero3.jpg";
+import hero4 from "../../assets/Banner-images/hero4.jpg";
+import hero5 from "../../assets/Banner-images/hero5.jpeg";
+import hero6 from "../../assets/Banner-images/hero6.jpg";
+import hero7 from "../../assets/Banner-images/hero7.jpg";
 
-const images = [hero5, hero1, hero2, hero7, hero6, hero3, hero4];
+
+const images = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
@@ -16,7 +17,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

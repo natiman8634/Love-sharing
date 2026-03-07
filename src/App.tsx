@@ -1,12 +1,10 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Teams from "./components/Teams";
-import Footer from "./components/Footer";
-import EthiopiaSection from "./components/EthiopiaSection";
-import About from "./components/About";
-import Purpose from "./components/Purpose";
-
-
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Banner/Hero";
+import Purpose from "./components/Purpose/Purpose";
+import JoinOurMission from "./components/Join-Our-Mission/Join-Our-Mission";
+import Teams from "./components/Teams/Teams";
+import About from "./components/About-us/About";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,7 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Purpose />
-      <EthiopiaSection />
+      <JoinOurMission />
       <Teams />
       <About />
       <Footer />

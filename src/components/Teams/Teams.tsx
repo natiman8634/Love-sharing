@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import children from "../assets/20250610_182355.jpg";
-import funding from "../assets/funding.jpg";
-import bible from "../assets/bible.jpg";
-import treatment from "../assets/treatment.jpg";
-import prison from "../assets/hero2.jpg";
+import children from "../../assets/Banner-images/hero4.jpg";
+import funding from "../../assets/Teams-images/funding.jpg";
+import bible from "../../assets/Teams-images/bible.jpg";
+import treatment from "../../assets/Teams-images/treatment.jpg";
+import prison from "../../assets/Banner-images/hero3.jpg";
 
 const teams = [
   {
@@ -83,7 +83,7 @@ const Teams = () => {
             return (
               <div
                 key={index}
-                className={`
+                className={` 
                   bg-white rounded-2xl shadow-lg overflow-hidden 
                   /* Removed rotation - kept smooth scale and shadow transition */
                   transition-all duration-500 ease-in-out
