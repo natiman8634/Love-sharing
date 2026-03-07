@@ -7,11 +7,11 @@ const Footer = () => {
 
         {/* ABOUT */}
         <div>
-           
-          <h3 className="text-xl font-bold text-white mb-4">
+           <a href="#home"><h3 className="text-xl font-bold text-white mb-4">
               <img src={logo} className="h-12 mb-4" />
             Lovesharing
-          </h3>
+          </h3></a>
+          
 
           <p className="text-gray-400 leading-relaxed">
             ፍቅርን የሚያጋሩ የክርስቲያን ተማሪዎች ህብረት።
