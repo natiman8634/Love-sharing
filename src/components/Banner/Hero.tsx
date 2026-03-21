@@ -82,7 +82,7 @@ const Hero = () => {
             <a
               href="#join"
               onClick={(e) => handleSmoothScroll(e, "join")}
-              className="inline-block bg-white text-gray-900 px-6 py-2.5 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl hover:scale-105 transition-transform"
+              className="inline-block bg-white text-gray-900 px-6 py-2.5 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg shadow-xl hover:scale-105 transition-transform "
             >
               Join Our Mission
             </a>
