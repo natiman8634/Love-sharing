@@ -1,4 +1,8 @@
-import logo from "../../assets/Love-sharing-logo/logo.png";
+import logo from "../../assets/Footer-images/lovesharing-footer-logo.png";
+
+import telegram from "../../assets/Footer-images/Telegram-icon.png";
+import cbe from "../../assets/Footer-images/Commercial Bank of Ethiopia Logo .png";
+import locationIcon from "../../assets/Footer-images/location-icon.png";
 
 const Footer = () => {
   return (
@@ -7,11 +11,12 @@ const Footer = () => {
 
         {/* ABOUT */}
         <div>
-           <a href="#home"><h3 className="text-xl font-bold text-white mb-4">
-              <img src={logo} className="h-12 mb-4" />
-            Lovesharing
-          </h3></a>
-          
+          <a href="#home">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+              <img src={logo} className="h-12" alt="Lovesharing Logo" />
+              <span>Lovesharing</span>
+            </h3>
+          </a>
 
           <p className="text-gray-400 leading-relaxed">
             ፍቅርን የሚያጋሩ የክርስቲያን ተማሪዎች ህብረት።
@@ -24,13 +29,72 @@ const Footer = () => {
             መገኛችን
           </h3>
 
-          <ul className="space-y-3">
-            <li>📍 አርባ ምንጭ ዩኒቨርስቲ , Main-Campus</li>
+          <ul className="space-y-4 text-gray-400">
+
+            {/* LOCATION */}
+            <li className="flex items-center gap-3">
+  <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition">
+    <img
+      src={locationIcon}
+      alt="Location"
+      className="w-5 h-5 object-contain"
+    />
+  </div>
+
+  <span className="text-white">አርባ ምንጭ ዩኒቨርስቲ , Main-Campus</span>
+</li>
+
+            {/* TELEGRAM */}
+            <li className="flex items-center gap-3">
+              <a
+                href="https://t.me/love_sharingamuecsf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
+              >
+                <img
+                  src={telegram}
+                  alt="Telegram"
+                  className="w-5 h-5 object-contain"
+                />
+              </a>
+              <a href="https://t.me/love_sharingamuecsf"><span>Our-Telegram-Channel</span></a>
+              
+            </li>
+
           </ul>
         </div>
 
-        {/* SOCIAL MEDIA */}
-        
+        {/* SUPPORT */}
+        <div>
+          <h3 className="text-xl font-bold text-white mb-4">
+            Support Us
+          </h3>
+
+          <div className="flex items-center gap-4">
+
+            {/* BANK LOGO */}
+            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition">
+              <img
+                src={cbe}
+                alt="Commercial Bank"
+                className="w-7 h-7 object-contain"
+              />
+            </div>
+
+            {/* BANK TEXT */}
+            <div className="text-gray-400">
+              <p className="font-semibold text-white">
+                Commercial Bank of Ethiopia
+              </p>
+              <p className="text-sm">
+                Account: <span className="font-medium text-white">1000583215167</span>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
 
       </div>
 
