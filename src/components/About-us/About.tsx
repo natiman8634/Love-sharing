@@ -62,7 +62,7 @@ const About = () => {
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border-[6px] border-[#F9D7C1]">
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/m8QHzsO5y4E" 
+                    src="https://www.youtube.com/embed/O3eUZ4r-waU" 
                     title="Love-sharing department video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
