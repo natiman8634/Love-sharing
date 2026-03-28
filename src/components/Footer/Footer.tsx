@@ -58,7 +58,7 @@ const Footer = () => {
                   className="w-5 h-5 object-contain"
                 />
               </a>
-              <a href="https://t.me/love_sharingamuecsf"><span className="text-white">የቴሌግራም ቻናላችን</span></a>
+              <a href="https://t.me/love_sharingamuecsf"><span className="text-white">love_sharingamuecsf</span></a>
               
             </li>
 
