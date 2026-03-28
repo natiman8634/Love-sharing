@@ -88,7 +88,7 @@ const Footer = () => {
                 Commercial Bank of Ethiopia
               </p>
               <p className="text-sm">
-                Account: <span className="font-medium text-white">1000583215167</span>
+                Account: <span className="font-medium text-white">1000690607836</span>
               </p>
             </div>
 
